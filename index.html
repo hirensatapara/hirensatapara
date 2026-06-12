@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Burger Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.88)), url(https://i.pinimg.com/736x/f8/c8/cc/f8c8ccc506ec5e78e09593fed6e50546.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .nav {
+            background-color: rgba(253, 244, 227, 0.98);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo img { height: 40px; display: block; }
+
+        .menu { display: flex; gap: 15px; }
+
+        .menu a {
+            text-decoration: none;
+            color: #2c1a04;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 10px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .menu a:hover {
+            background-color: #ff9f1c;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(255, 159, 28, 0.4);
+        }
+
+        .main-wrapper { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .hero-image { flex: 1; display: flex; justify-content: center; }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            max-height: 550px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-text {
+            flex: 1;
+            background-color: rgba(20, 20, 20, 0.65);
+            padding: 40px;
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.7;
+            font-size: 17px;
+            text-align: justify;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 25px;
+            background-color: #ff9f1c;
+            color: white;
+            text-decoration: none;
+            padding: 12px 35px;
+            font-weight: 600;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 159, 28, 0.3);
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cta-button:hover {
+            background-color: #e68a00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 159, 28, 0.5);
+        }
+
+        .story-section {
+            background-color: rgba(25, 25, 25, 0.75);
+            padding: 45px;
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 159, 28, 0.15);
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .story-section h2 {
+            color: #ff9f1c;
+            font-size: 26px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            border-left: 4px solid #ff9f1c;
+            padding-left: 12px;
+        }
+
+        .story-section h2:first-child { margin-top: 0; }
+
+        .story-section p {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #e0e0e0;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .features-banner {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: linear-gradient(135deg, rgba(255, 159, 28, 0.15), rgba(0,0,0,0.4));
+            border: 1px solid rgba(255, 159, 28, 0.25);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-item { text-align: center; min-width: 150px; }
+        .feature-item .icon { font-size: 35px; margin-bottom: 8px; }
+        .feature-item .title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #ff9f1c;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 1 / 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(255, 159, 28, 0.3); }
+        .gallery-item:hover img { transform: scale(1.08); }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(10, 10, 10, 0.9);
+            font-size: 14px;
+            color: #aaaaaa;
+            letter-spacing: 0.5px;
+        }
+
+        footer span { color: #ff9f1c; font-weight: 600; }
+
+        /* ====== ORDER MODAL ====== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-box {
+            background: linear-gradient(145deg, #1a1000, #2a1800);
+            border: 1px solid rgba(255, 159, 28, 0.3);
+            border-radius: 28px;
+            padding: 40px;
+            width: 100%;
+            max-width: 560px;
+            max-height: 92vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,159,28,0.1);
+            animation: slideUp 0.35s ease;
+            position: relative;
+        }
+
+        .modal-box::-webkit-scrollbar { width: 6px; }
+        .modal-box::-webkit-scrollbar-track { background: transparent; }
+        .modal-box::-webkit-scrollbar-thumb { background: rgba(255,159,28,0.3); border-radius: 3px; }
+
+        .modal-close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            background: rgba(255,159,28,0.15);
+            border: 1px solid rgba(255,159,28,0.3);
+            color: #ff9f1c;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+
+        .modal-close:hover { background: rgba(255,159,28,0.35); transform: rotate(90deg); }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-header .burger-icon { font-size: 46px; margin-bottom: 8px; }
+
+        .modal-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            letter-spacing: 2px;
+            color: #ff9f1c;
+            margin: 0 0 4px;
+        }
+
+        .modal-header p { color: #aaa; font-size: 14px; margin: 0; }
+
+        .form-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 159, 28, 0.15);
+            margin: 20px 0;
+        }
+
+        .form-group { margin-bottom: 18px; }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #ff9f1c;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 159, 28, 0.2);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            transition: border-color 0.25s, background 0.25s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #ff9f1c;
+            background: rgba(255, 159, 28, 0.08);
+        }
+
+        .form-group select option { background: #1a1000; color: #fff; }
+
+        .form-group textarea { resize: vertical; min-height: 80px; }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+        .qty-stepper {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            width: fit-content;
+        }
+
+        .qty-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,159,28,0.15);
+            border: 1px solid rgba(255,159,28,0.3);
+            color: #ff9f1c;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1;
+        }
+
+        .qty-btn:hover { background: rgba(255,159,28,0.3); }
+
+        .qty-display {
+            width: 56px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            padding: 0 8px;
+        }
+
+        .size-options { display: flex; gap: 10px; }
+
+        .size-btn {
+            flex: 1;
+            padding: 10px 5px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,159,28,0.2);
+            color: #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .size-btn.active, .size-btn:hover {
+            background: rgba(255,159,28,0.2);
+            border-color: #ff9f1c;
+            color: #ff9f1c;
+        }
+
+        .addon-options { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .addon-chip {
+            padding: 7px 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,159,28,0.2);
+            color: #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .addon-chip.active, .addon-chip:hover {
+            background: rgba(255,159,28,0.2);
+            border-color: #ff9f1c;
+            color: #ff9f1c;
+        }
+
+        .order-summary {
+            background: rgba(255,159,28,0.07);
+            border: 1px solid rgba(255,159,28,0.2);
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 8px;
+        }
+
+        .summary-row:last-child { margin-bottom: 0; }
+
+        .summary-row.total {
+            border-top: 1px solid rgba(255,159,28,0.2);
+            padding-top: 10px;
+            margin-top: 4px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #ff9f1c;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #ff9f1c, #e68a00);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 159, 28, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(255, 159, 28, 0.5);
+        }
+
+        .success-screen {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .success-screen.show { display: block; animation: fadeIn 0.4s ease; }
+
+        .success-icon {
+            font-size: 72px;
+            margin-bottom: 16px;
+            animation: bounce 0.6s ease;
+        }
+
+        @keyframes bounce {
+            0% { transform: scale(0.5); opacity: 0; }
+            70% { transform: scale(1.15); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .success-screen h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            color: #ff9f1c;
+            letter-spacing: 2px;
+            margin: 0 0 10px;
+        }
+
+        .success-screen p { color: #ccc; font-size: 15px; margin-bottom: 8px; }
+
+        .order-id {
+            display: inline-block;
+            background: rgba(255,159,28,0.15);
+            border: 1px dashed rgba(255,159,28,0.4);
+            color: #ff9f1c;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 8px 24px;
+            border-radius: 10px;
+            margin: 10px 0 24px;
+            letter-spacing: 2px;
+        }
+
+        .eta-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 28px;
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        .eta-badge .eta-time { font-size: 22px; font-weight: 700; color: #ff9f1c; }
+
+        .close-success-btn {
+            padding: 12px 40px;
+            background: transparent;
+            border: 2px solid #ff9f1c;
+            color: #ff9f1c;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+
+        .close-success-btn:hover { background: #ff9f1c; color: #fff; }
+
+        @media (max-width: 968px) {
+            .hero-container { flex-direction: column; }
+            .nav { flex-direction: column; gap: 15px; border-radius: 20px; padding: 15px; }
+            .menu { width: 100%; justify-content: center; flex-wrap: wrap; }
+            .hero-text, .story-section { padding: 25px; }
+            .modal-box { padding: 28px 20px; }
+            .size-options { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="logo">
+            <img src="https://i.pinimg.com/1200x/f3/55/fe/f355fe7920728c3c154345655100f4ee.jpg" alt="Logo">
+        </div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="https://i.pinimg.com/1200x/75/1d/e3/751de342161572ec69a5a53bbfda9a15.jpg" alt="Premium Burger">
+            </div>
+            <div class="hero-text">
+                A perfect burger is a masterclass in culinary balance, delivering a glorious mix of textures and flavors in every single bite. It begins with the soft, pillowy comfort of a warm, lightly toasted bun that gives way to a rich, savory patty—perfectly grilled, seasoned, and incredibly juicy. This warm, melt-in-your-mouth foundation is beautifully countered by the crisp, refreshing crunch of fresh lettuce, sharp onions, and tangy pickles. Layered with velvety melted cheese and a harmonious blend of creamy mayonnaise and zesty sauces, it offers a deeply satisfying blend of smoky, cheesy, and tangy notes. It is more than just a meal; it is the ultimate comfort food experience that satisfies all your cravings at once.
+                <br><br>
+                Experience the ultimate taste explosion with our signature burger. Featuring a hot, juicy, and perfectly seasoned patty nestled inside a soft, toasted bun, it is layered with melted cheese, fresh crunchy greens, and a burst of tangy gourmet sauces.
+                <br>
+                <button class="cta-button" onclick="openModal()">🍔 Order Deliciously Now</button>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2>The Global Phenomenon</h2>
+            <p>A burger is far more than just a quick meal; it is a global culinary icon that transcends borders and cultures to bring pure comfort to millions. At its core, a great burger represents the ultimate harmony of diverse textures and contrasting temperatures coming together in a single, magnificent bite. The magic lies in its beautiful simplicity and the endless possibilities for customization, making it a beloved staple for food lovers ranging from casual street-food enthusiasts to high-end gourmet connoisseurs.</p>
+
+            <h2>A Journey Through Time</h2>
+            <p>While often celebrated as the definitive American classic, the true origin of the burger traces back to the port city of Hamburg, Germany. In the 19th century, immigrants introduced the "Hamburg steak" to American shores, where resourceful cooks eventually placed the seasoned meat between two slices of bread for easy, on-the-go consumption. By the mid-20th century, the fast-food revolution transformed this simple sandwich into a global commercial empire, evolving from a humble working-class lunch into a multi-billion-dollar culinary art form celebrated worldwide.</p>
+
+            <h2>The Anatomy of a Perfect Bite</h2>
+            <p>Crafting an exceptional burger requires meticulous attention to every single layer. It begins with a cloud-soft, pillowy bun—ideally a rich, buttery Brioche—that is lightly toasted to hold the rich juices without becoming soggy. At the heart of the structure sits the star of the show: a perfectly seasoned, flame-grilled patty that boasts a deeply caramelized outer crust while remaining incredibly tender and juicy on the inside. This warm foundation is crowned with a blanket of beautifully melted cheddar cheese and immediately countered by the refreshing, cold crunch of crisp lettuce, ripe tomato slices, sharp red onions, and tangy pickles.</p>
+
+            <h2>The Modern Gourmet Evolution</h2>
+            <p>Today, the humble burger is undergoing a sophisticated transformation in the modern culinary landscape. Chefs around the world are redefining the classic recipe by experimenting with premium proteins, exotic plant-based vegan patties, artisan sourdough buns, and luxurious toppings like truffle aioli. By replacing heavy oils with grilling techniques and incorporating fresh, locally sourced organic greens, the contemporary burger successfully sheds its old "junk food" label.</p>
+        </div>
+
+        <div class="features-banner">
+            <div class="feature-item">
+                <div class="icon">🍔</div>
+                <div class="title">100% Fresh Bun</div>
+            </div>
+            <div class="feature-item">
+                <div class="icon">🔥</div>
+                <div class="title">Flame Grilled</div>
+            </div>
+            <div class="feature-item">
+                <div class="icon">🌿</div>
+                <div class="title">Organic Veggies</div>
+            </div>
+            <div class="feature-item">
+                <div class="icon">🚀</div>
+                <div class="title">Super Fast Delivery</div>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/1200x/5a/1b/f1/5a1bf197978d33298f16504f1bea8d39.jpg" alt="Burger Item 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/0e/1f/8b/0e1f8b9e70ef00c419d09bbe6d73efba.jpg" alt="Burger Item 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/64/b1/ea/64b1ea7ba6f181496a924b7f3d107dfa.jpg" alt="Burger Item 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/da/83/ff/da83ff20cd495ff081c83c083ccc7db0.jpg" alt="Burger Item 4">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Premium Burger Cafe. Designed with Passion for <span>Gourmet Lovers</span>.</p>
+    </footer>
+
+    <!-- ===== ORDER MODAL ===== -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+
+            <!-- ORDER FORM -->
+            <div id="orderForm">
+                <div class="modal-header">
+                    <div class="burger-icon">🍔</div>
+                    <h2>Place Your Order</h2>
+                    <p>Fill in the details below and we'll deliver hot to your door</p>
+                </div>
+
+                <hr class="form-divider">
+
+                <div class="form-group">
+                    <label>🍔 Burger Select Karo</label>
+                    <select id="burgerType" onchange="updatePrice()">
+                        <option value="0">-- Burger Pasand Karo --</option>
+                        <option value="149">Classic Smash Burger — ₹149</option>
+                        <option value="179">Double Cheese Delight — ₹179</option>
+                        <option value="199">BBQ Smoky Beast — ₹199</option>
+                        <option value="219">Spicy Volcano Burger — ₹219</option>
+                        <option value="229">Truffle Gourmet Burger — ₹229</option>
+                        <option value="159">Crispy Veggie Burger — ₹159</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>📏 Size</label>
+                    <div class="size-options">
+                        <button class="size-btn" onclick="setSize('Regular', 0, this)">Regular</button>
+                        <button class="size-btn active" onclick="setSize('Medium', 20, this)">Medium</button>
+                        <button class="size-btn" onclick="setSize('Large', 40, this)">Large</button>
+                        <button class="size-btn" onclick="setSize('XL', 60, this)">XL 🔥</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>🔢 Jaththa (Quantity)</label>
+                    <div class="qty-stepper">
+                        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+                        <div class="qty-display" id="qtyDisplay">1</div>
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>➕ Extra Add-ons</label>
+                    <div class="addon-options">
+                        <span class="addon-chip" onclick="toggleAddon(this, 30)" data-name="Extra Cheese">🧀 Extra Cheese (+₹30)</span>
+                        <span class="addon-chip" onclick="toggleAddon(this, 20)" data-name="Extra Sauce">🍅 Extra Sauce (+₹20)</span>
+                        <span class="addon-chip" onclick="toggleAddon(this, 49)" data-name="French Fries">🍟 French Fries (+₹49)</span>
+                        <span class="addon-chip" onclick="toggleAddon(this, 29)" data-name="Cold Drink">🥤 Cold Drink (+₹29)</span>
+                        <span class="addon-chip" onclick="toggleAddon(this, 39)" data-name="Onion Rings">🧅 Onion Rings (+₹39)</span>
+                    </div>
+                </div>
+
+                <hr class="form-divider">
+
+                <div class="form-group">
+                    <label>👤 Tamaru Naam</label>
+                    <input type="text" id="custName" placeholder="Jema order karva ho e naam">
+                </div>
+
+                <div class="form-group">
+                    <label>📞 Mobile Number</label>
+                    <input type="tel" id="custPhone" placeholder="10-digit mobile number" maxlength="10">
+                </div>
+
+                <div class="form-group">
+                    <label>📍 Delivery Address</label>
+                    <textarea id="custAddress" placeholder="Full address — ghar, street, area, shaher..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>📝 Koi Khaas Note? (Optional)</label>
+                    <input type="text" id="custNote" placeholder="Ex: Less spicy, extra pickles...">
+                </div>
+
+                <div class="order-summary">
+                    <div class="summary-row"><span>Burger</span><span id="s-burger">—</span></div>
+                    <div class="summary-row"><span>Size</span><span id="s-size">Medium</span></div>
+                    <div class="summary-row"><span>Quantity</span><span id="s-qty">1</span></div>
+                    <div class="summary-row"><span>Add-ons</span><span id="s-addons">—</span></div>
+                    <div class="summary-row total"><span>💰 Total</span><span id="s-total">₹0</span></div>
+                </div>
+
+                <button class="submit-btn" onclick="submitOrder()">🚀 Order Place Karo!</button>
+            </div>
+
+            <!-- SUCCESS SCREEN -->
+            <div class="success-screen" id="successScreen">
+                <div class="success-icon">🎉</div>
+                <h3>Order Confirm Thayo!</h3>
+                <p>Taro order successfully place thayo chhe.</p>
+                <div class="order-id" id="orderIdDisplay">#BC-000</div>
+                <div class="eta-badge">
+                    <span>⏱️ Estimated Delivery Time:</span>
+                    <span class="eta-time">25–35 min</span>
+                </div>
+                <div id="orderSummaryText" style="color:#ccc; font-size:14px; margin-bottom:24px; line-height:1.8;"></div>
+                <button class="close-success-btn" onclick="closeModal()">✅ Done</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let qty = 1;
+        let sizeExtra = 20;
+        let addonsTotal = 0;
+        let selectedAddons = [];
+
+        function openModal() {
+            document.getElementById('orderModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('orderModal').classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(resetForm, 400);
+        }
+
+        function resetForm() {
+            document.getElementById('orderForm').style.display = 'block';
+            document.getElementById('successScreen').classList.remove('show');
+            document.getElementById('burgerType').value = '0';
+            document.getElementById('custName').value = '';
+            document.getElementById('custPhone').value = '';
+            document.getElementById('custAddress').value = '';
+            document.getElementById('custNote').value = '';
+            qty = 1;
+            sizeExtra = 20;
+            addonsTotal = 0;
+            selectedAddons = [];
+            document.getElementById('qtyDisplay').textContent = '1';
+            document.querySelectorAll('.addon-chip').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.size-btn').forEach((b, i) => {
+                b.classList.toggle('active', i === 1);
+            });
+            updatePrice();
+        }
+
+        function changeQty(delta) {
+            qty = Math.max(1, Math.min(20, qty + delta));
+            document.getElementById('qtyDisplay').textContent = qty;
+            document.getElementById('s-qty').textContent = qty;
+            updatePrice();
+        }
+
+        function setSize(label, extra, btn) {
+            sizeExtra = extra;
+            document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('s-size').textContent = label;
+            updatePrice();
+        }
+
+        function toggleAddon(chip, price) {
+            const name = chip.dataset.name;
+            if (chip.classList.contains('active')) {
+                chip.classList.remove('active');
+                addonsTotal -= price;
+                selectedAddons = selectedAddons.filter(a => a !== name);
+            } else {
+                chip.classList.add('active');
+                addonsTotal += price;
+                selectedAddons.push(name);
+            }
+            document.getElementById('s-addons').textContent = selectedAddons.length ? selectedAddons.join(', ') : '—';
+            updatePrice();
+        }
+
+        function updatePrice() {
+            const burgerSel = document.getElementById('burgerType');
+            const basePrice = parseInt(burgerSel.value) || 0;
+            const burgerName = burgerSel.options[burgerSel.selectedIndex].text;
+            const total = (basePrice + sizeExtra + addonsTotal) * qty;
+            document.getElementById('s-burger').textContent = basePrice ? burgerName.split(' —')[0] : '—';
+            document.getElementById('s-total').textContent = '₹' + total;
+        }
+
+        function submitOrder() {
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const burgerVal = document.getElementById('burgerType').value;
+            const burgerText = document.getElementById('burgerType').options[document.getElementById('burgerType').selectedIndex].text;
+
+            if (!burgerVal || burgerVal === '0') { alert('⚠️ Koi burger select karo!'); return; }
+            if (!name) { alert('⚠️ Tamaru naam bharvo!'); return; }
+            if (!phone || phone.length < 10 || !/^\d{10}$/.test(phone)) {
+                alert('⚠️ Valid 10-digit mobile number bharvo!'); return;
+            }
+            if (!address) { alert('⚠️ Delivery address bharvo!'); return; }
+
+            const orderId = '#BC-' + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('orderIdDisplay').textContent = orderId;
+
+            const sizeLabel = document.querySelector('.size-btn.active')?.textContent || 'Medium';
+            const total = document.getElementById('s-total').textContent;
+            const addonsStr = selectedAddons.length ? selectedAddons.join(', ') : 'Koi nahi';
+
+            document.getElementById('orderSummaryText').innerHTML =
+                `<strong style="color:#ff9f1c;">👤 Name:</strong> ${name}<br>
+                 <strong style="color:#ff9f1c;">📞 Phone:</strong> ${phone}<br>
+                 <strong style="color:#ff9f1c;">📍 Address:</strong> ${address}<br>
+                 <strong style="color:#ff9f1c;">🍔 Item:</strong> ${burgerText.split(' —')[0]} (${sizeLabel} × ${qty})<br>
+                 <strong style="color:#ff9f1c;">➕ Add-ons:</strong> ${addonsStr}<br>
+                 <strong style="color:#ff9f1c;">💰 Total:</strong> ${total}`;
+
+            document.getElementById('orderForm').style.display = 'none';
+            document.getElementById('successScreen').classList.add('show');
+        }
+
+        document.getElementById('orderModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+
+</body>
+</html>
