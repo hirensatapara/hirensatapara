@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(142, 159, 11);
+        }
+        .box{
+                border-color: black;
+                padding:100px;
+                margin:9px;
+                border-radius:30px;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                margin-bottom:50px;
+                position: sticky;
+                top: 10px;
+        }
+        .box1{
+                background-color: brown;
+                border:2px;
+                border-radius: 9px;
+        }
+        .box2{
+                background-color: rgb(8, 232, 45);
+                border:2px;
+                border-radius: 9px;
+        }
+        .box3{
+                background-color: rgb(24, 4, 243);
+                border:2px;
+                border-radius: 9px;
+        }
+        @media screen and (max-width:800px) and (max-width:800px){
+    .box{
+        flex-direction:column;
+        gap:15px;
+        background-color: blueviolet;
+}
+    .box-links{
+        flex-direction:column;
+        align-items:center;
+}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, fugit dolorem nulla asperiores voluptatibus earum consectetur culpa, quod adipisci iusto amet at fuga quas assumenda?</h1>
+    </div>
+    <div class="box2">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, fugit dolorem nulla asperiores voluptatibus earum consectetur culpa, quod adipisci iusto amet at fuga quas assumenda?</h1>
+    </div>
+    <div class="box3">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, fugit dolorem nulla asperiores voluptatibus earum consectetur culpa, quod adipisci iusto amet at fuga quas assumenda?</h1>
+    </div>
+    <div>
+    </div>
+</body>
+</html>

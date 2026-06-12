@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar</title>
+<style>
+body{
+    background: linear-gradient(
+    -45deg,
+    rgb(255,0,150),
+    rgb(0,200,255),
+    rgb(0,255,120),
+    rgb(255,200,0)
+    );
+
+    background-size: 400% 400%;
+    animation: rgbbg 10s ease infinite;
+}
+@keyframes rgbbg{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+.nav{
+    background-color: rgb(191, 194, 196);
+    border-color: black;
+    padding:20px;
+    margin:9px;
+    border-radius:30px;
+    height:200px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+    position: sticky;
+    top: 10px;
+    z-index: +1;
+}
+.logo{
+    color:rgb(236, 244, 239);
+    font-size:120px;
+    font-weight:bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+.nav-links h1{
+    margin:0;
+    color:rgb(255,188,4);
+    font-size:28px;
+}
+@media screen and (max-width:800px) and (max-width:800px){
+    .nav{
+        flex-direction:column;
+        gap:15px;
+}
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+}
+}
+input{
+    font-size: 60px;
+    border-radius: 15px;
+    border-color: rgb(255, 252, 252);
+}
+.im1{
+    background-image: url("https://www.w3schools.com/w3images/hamburger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 3000px;
+    border-radius: 0px;
+    margin:480px
+}
+.Lc{
+    position: relative;
+    top: 2500px;
+}
+.im2{
+    background-image: url("https://www.w3schools.com/w3images/tablesetting2.jpg");
+    background-repeat: no-repeat;
+    background-size: 3000px;
+    height: 5000px;
+    border-radius: 0.1px;
+    padding-right: 50px;
+    margin-left: 1000px;
+}
+.pos{
+    margin-left: 500px;
+    margin-bottom: 500px;
+}
+.pos2{
+    margin-left: 400px;
+    margin-top:500px ;
+    margin-bottom:500px ;
+    margin-right:10px;
+}
+.menu{
+    margin-top: 500px;
+    margin-left: 1200px;
+}
+input{
+    height: 130px;
+    font-size: 90px;
+    border-radius: 20px;
+    overflow:auto ;
+}
+a{
+    overflow: hidden;
+}
+input:hover{
+    background-color: rgb(3, 255, 200);
+    transition: background-color 1s ease;
+}
+.burger{
+    position: fixed;
+    top: 300px;
+    left: -200px;
+
+    font-size: 180px;
+
+    animation: burgerMove 12s linear infinite;
+
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.burger:hover{
+    transform: scale(1.3) rotate(10deg);
+}
+
+.burger:hover::after{
+    content:" 😄";
+}
+
+@keyframes burgerMove{
+
+    0%{
+        left:-200px;
+    }
+
+    50%{
+        top:500px;
+    }
+
+    100%{
+        left:100%;
+    }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+    <h1 class="logo" style="color: black;">Gourment au Catering</h1>
+    <div class="nav-links">
+        <h1 style="font-size: 80px;"><a href="about.html" style="color: rgb(22, 5, 5);"><input type="submit" value="About"></a></h1>
+        <h1 style="font-size: 80px;"><a href="mynew.html" style="color: black;"><input type="submit" value="Menu"></a></h1>
+        <h1 style="font-size: 80px"><a href="contect.html" style="color: black;"><input type="submit" value="Contect"></a></h1>
+    </div>
+</nav>
+<div class="im1" style="color: black;font-size: 200px;"><h1 class="Lc">Lc Catering</h1></div>
+<table class="pos">
+    <tr class="pos">
+        <td><img src="https://www.w3schools.com/w3images/tablesetting2.jpg" height="4000px"></td>
+        <td style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+<center><br><h1 style="font-size:200px ;">About Catering</h1>
+<h1 style="font-size: 110px;">Tradition since 1889</h1><br>
+<h1 style="font-size: 90px;">The Catering was founded in blabla by <br>Mr. Smith in lorem ipsum dolor sit amet, <br>consectetur adipiscing elit consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation<br> ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute iruredolor in reprehenderit in voluptate <br>We only use seasonal ingredients.<br><br>
+
+Excepteur sint occaecat cupidatat non proident, <br>sunt in culpa qui officia deserunt mollit anim id est <br>laborum consectetur adipiscing elit, <br>sed do eiusmod temporincididunt ut labore<br> et dolore magna aliqua. Ut enim ad minim veniam,<br> quis nostrud exercitation ullamco laboris nisi ut<br> aliquip ex ea commodo consequat.</td>
+   </center> </h1></tr>
+</table><hr>
+ <center>  
+<table class="pos2">
+ <tr>
+    <td><h1 style="font-size: 200px;">Our Menu</h1>
+
+<h1 style="font-size: 120px;">Bread Basket</h1>
+<h1 style="font-size: 80px;">Assortment of fresh baked fruit breads and muffins 5.50</h1>
+
+<h1 style="font-size: 120px;">Honey Almond Granola with Fruits</h1>
+<h1 style="font-size: 80px;">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</h1>
+
+<h1 style="font-size: 120px;">Belgian Waffle</h1>
+<h1 style="font-size: 80px;">Vanilla flavored batter with malted flour 7.50</h1>
+
+<h1 style="font-size: 120px;">Scrambled eggs</h1>
+<h1 style="font-size: 80px;">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</h1>
+
+<h1 style="font-size: 120px;">Blueberry Pancakes</h1>
+<h1 style="font-size: 80px;">With syrup, butter and lots of berries 8.50</h1></td>
+<td><img src="https://www.w3schools.com/w3images/tablesetting.jpg" height="4000px" width="3000px"></td>
+   </tr>
+</table>
+<hr>
+</center>
+<div class="menu">
+       <h1 style="font-size: 230px;">Contact</h1>
+<h2 style="font-size: 80px;">
+We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.
+
+<br>Catering Service, 42nd Living St, 43043 New York, NY</h2>
+
+<h1 style="font-size: 80px;">You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</h1>
+<h1 class="name" style="font-size: 80px;">
+<input type="Name" placeholder="Name.."></h1>
+<hr>
+<input type="number" placeholder="How many people..">
+<hr>
+<input type="date"><input type="time">
+<hr>
+<input type="text" placeholder="Message \ Special requirements.."></h1>
+<hr>
+<input type="text" placeholder="your favourit Barghr">
+<hr>
+<input type="email" placeholder="Email addrees">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<input type="submit" value="SEEND MESSAGE">
+</div>
+<div class="burger">
+    🍔
+</div>
+<center>
+    <h1 style="font-size: 80px;">power by <a href="home.html">w3.css</a></h1>
+</center>
+</body>
+</html>

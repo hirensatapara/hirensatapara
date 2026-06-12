@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .relative{
+            position:relative;
+            width:400px;
+            height:200px;
+            border:3px solid #73AD21;
+            border-radius: 15px;
+        }
+        .absolute{
+            position: absolute;
+            top:80px;
+            right:0;
+            width:200px;
+            height: 100px;
+            border:3px solid #73AD21;
+             border-radius: 15px;
+        }
+        .img{
+            position: absolute;
+            left:0px;
+            top:0px;
+            z-index: -1;
+        }
+        .overflow1{
+            background-color:coral;
+            width:200px;
+            height:65px;
+            border:1px solid;
+            overflow:visible;
+            margin:50px;
+        }
+        .overflow2{
+            background-color:coral;
+            width:200px;
+            height:65px;
+            border:1px solid;
+            overflow:hidden;
+            margin:50px;
+        }
+        .overflow3{
+            background-color:coral;
+            width:200px;
+            height:65px;
+            border:1px solid;
+            overflow:scroll;
+            margin:50px;
+        }
+        .overflow4{
+            background-color:coral;
+            width:200px;
+            height:65px;
+            border:1px solid;
+            overflow:auto;
+            margin:50px;
+        }
+        .p{
+            font-size: 30px;
+        }
+        .right{
+            width:170px;
+            margin-left: 10px;
+            float:right;
+        }
+         .left{
+            width:170px;
+            margin-left: 10px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <h2>positon:absolute;</h2>
+    <p>An eleme t with position: absolute; is positioned to the nearest positioned ancestor(positioned ancestor instead of positioned relative to the viewport,like fixed):</p>
+    <div class="relative">
+        This div element has position:relative;
+        <div class="absolute"> This div element has position:absolute;</div>
+    </div>
+    <h1>This is aheading</h1>
+    <img src="https://images.unsplash.com/photo-1778880509945-9d3b0a9162a1?q=80&w=1020&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="height:150px; width:150px;">
+    <p>Because the image has a z-index of -1, is will be placed behind the text.</p>
+    <div class="overflow1">
+        You can use the overflow proprty when you want \to have better control of the layout. The overflow property specifies what happens if content overflow an element's box.
+    </div>
+      <div class="overflow2">
+        You can use the overflow proprty when you want \to have better control of the layout. The overflow property specifies what happens if content overflow an element's box.
+    </div>
+      <div class="overflow3">
+        You can use the overflow proprty when you want \to have better control of the layout. The overflow property specifies what happens if content overflow an element's box.
+    </div>
+      <div class="overflow4">
+        You can use the overflow proprty when you want \to have better control of the layout. The overflow property specifies what happens if content overflow an element's box.
+    </div>
+    <p><img class="right" src="https://images.unsplash.com/photo-1778546978926-100202afc9cf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="claymeny"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deserunt neque eveniet voluptatum nihil architecto modi impedit debitis odit, exercitationem eaque quos hic ex. Nesciunt veritatis soluta expedita commodi, quidem nulla cum maxime laborum! Nam iusto beatae, eum omnis, necessitatibus officia qui quaerat at molestias consequatur mollitia cumque, enim reiciendis quibusdam soluta perspiciatis assumenda vitae aut quia dignissimos. Eos modi vitae quam quo rerum quos perspiciatis ipsum porro tenetur praesentium distinctio ratione dolor quaerat veritatis officia, quas beatae velit atque. Cum minus pariatur voluptatibus a eum quae illum cupiditate fugit, porro aliquam in, animi tenetur reprehenderit, sunt maxime impedit deserunt.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ex ipsam a impedit sunt odio id soluta provident. Et omnis ratione architecto quis dolor nihil, asperiores recusandae dolore autem vel est sed perspiciatis maiores, consectetur odit, nesciunt a odio! Blanditiis provident aut enim quibusdam neque, perspiciatis repudiandae incidunt accusantium aperiam recusandae placeat, pariatur cupiditate ab. Natus quos exercitationem delectus eius sit, placeat ipsum at assumenda voluptates optio, quia reiciendis tempore omnis dignissimos cumque debitis quibusdam tempora sint dolore laborum minima eligendi perferendis. Blanditiis dignissimos eum excepturi accusantium necessitatibus, quis minus nemo facilis recusandae libero quaerat molestiae voluptates neque, molestias quidem?</p>
+    <p><img class="left" src="https://images.unsplash.com/photo-1778882112317-a9f62d864d97?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="tree">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi assumenda ab vero sit officia veniam quidem voluptas officiis quos, minima consectetur nesciunt dolorum odit obcaecati consequuntur illo deleniti incidunt quae fuga repudiandae facere repellendus dolorem? Delectus molestias, cumque dolore itaque id perspiciatis ullam aliquam doloribus, omnis dolores error facere eaque neque voluptatibus saepe, culpa obcaecati minima natus recusandae. In eligendi error perspiciatis, iusto mollitia voluptas rem eaque quia sint fugit tempora reprehenderit debitis veniam molestiae saepe numquam praesentium officia quasi? Fugit, reiciendis et ab hic a maiores possimus vel voluptas deleniti vero natus ullam repellendus veritatis distinctio, optio eaque ex. Voluptas, exercitationem harum possimus sed quos quaerat inventore quo illo alias nihil. In, accusantium explicabo veniam doloribus recusandae optio quis soluta odit mollitia perspiciatis voluptatem pariatur! Assumenda natus minima quam, molestiae fuga beatae esse temporibus autem soluta? Eos sapiente dignissimos, est officiis inventore delectus nemo veniam ea quis commodi. Quisquam nostrum doloribus officiis illum dolorum libero ullam ex dolore, labore accusantium fugiat suscipit incidunt sed id laboriosam, eos dignissimos maxime numquam, repudiandae excepturi ea commodi. At harum dolorum, voluptatem distinctio quod voluptatum ut fugiat nam odio nulla aliquam ullam quo, perferendis, sit nostrum eveniet assumenda repellat animi. Soluta, similique Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus velit minus est ad expedita voluptates ducimus provident quo possimus officiis vitae, asperiores praesentium explicabo ex quas illo sunt ullam minima debitis eligendi repellendus. Voluptatum omnis doloribus ullam animi, provident laborum porro quae aut laboriosam maxime ab sed, magni quas quisquam odio quia quo. Explicabo pariatur eveniet obcaecati amet commodi minima, error repellendus reprehenderit id mollitia deleniti laborum ullam similique hic delectus asperiores voluptas incidunt consectetur, alias dolorem eligendi. Magnam rem minima eaque, mollitia architecto consequatur nostrum voluptates minus asperiores nisi cumque voluptate fugit, eius molestias natus placeat libero sed officiis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi fugiat illo architecto omnis cum odio, dolores maxime nulla sit laudantium veniam iusto laborum distinctio obcaecati dolore magni tenetur eius perspiciatis aut maiores nemo assumenda. Sit natus quas dolore, obcaecati placeat illum vel explicabo aliquid ab ipsum fugiat nulla eum recusandae veniam laboriosam reprehenderit corporis, nam neque officiis incidunt maiores est itaque asperiores optio. Voluptas accusamus impedit quia, non nesciunt maxime nostrum deserunt sunt debitis temporibus. Porro nihil, corrupti ab dolores, eius provident ducimus excepturi corporis cupiditate non unde nisi dolore perspiciatis asperiores aperiam. Natus, odio vitae pariatur expedita dolorem cumque!lorem50
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolores ea quidem dolor non iure quasi delectus cum fugiat at consequatur amet cumque itaque expedita, quas provident error vitae vel minima. Dolorem distinctio aut voluptatem adipisci, minus consectetur officia est inventore neque in magnam exercitationem doloribus quos obcaecati rerum dignissimos.</p>
+</body>
+</html>

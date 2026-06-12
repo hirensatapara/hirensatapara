@@ -1,0 +1,115 @@
+```css
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width:1024px){
+
+    .logo{
+        font-size:60px;
+    }
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .nav-links input{
+        font-size:30px;
+        height:70px;
+    }
+
+    .about,
+    .menu-section{
+        flex-direction:column;
+        padding:40px;
+    }
+
+    .about img,
+    .menu-img img{
+        width:100%;
+        height:auto;
+    }
+
+    .about-text,
+    .menu-text{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:80px;
+    }
+
+}
+
+/* MOBILE */
+
+@media screen and (max-width:768px){
+
+    .nav{
+        flex-direction:column;
+        padding:20px;
+        gap:20px;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:35px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .nav-links input{
+        width:100%;
+        height:55px;
+        font-size:20px;
+    }
+
+    .hero{
+        height:60vh;
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .about,
+    .menu-section,
+    .contact{
+        padding:20px;
+    }
+
+    .about-text h1,
+    .menu-text h1,
+    .contact h1{
+        font-size:35px;
+    }
+
+    .about-text p,
+    .menu-item p,
+    .contact p{
+        font-size:16px;
+    }
+
+    .menu-item h2{
+        font-size:22px;
+    }
+
+    input{
+        font-size:16px;
+        height:50px;
+    }
+
+    button{
+        width:100%;
+        font-size:18px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:20px;
+    }
+}
+```

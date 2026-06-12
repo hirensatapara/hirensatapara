@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border:1px solid black;
+            display:grid;
+            grid-template-columns: auto auto auto auto 400px;
+            grid-template-rows: 100px 150px;
+            gap:10px;
+            padding:10px;
+            border-radius: 15px;
+            background-color: blue;
+        }
+        .main div{
+            border:1px solid black;
+            text-align: center;
+            font-size:35px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(226, 10, 10);
+        }
+    .one1{
+            grid-row-start: 1;
+            grid-column-end: 3;
+            border-radius: 15px;
+            background-color: rgb(12, 219, 53);
+        }
+    .six{
+            grid-column: 2/5;
+            border-radius: 15px;
+            background-color: rgb(145, 9, 98);
+         }
+    .five{
+            grid-row: 2/4;
+            border-radius: 15px;
+            background-color: rgb(169, 187, 9);
+        }
+    </style>
+</head>
+   <body>
+        <div class="main">
+        <div class="one" style="background-color: rgb(177, 221, 19);">one</div>
+        <div class="one1" style="background-color: rgb(17, 189, 212);">two</div>
+        <div class="one" style="background-color: rgb(205, 5, 195);">three</div>
+        <div class="four" style="background-color: rgb(10, 114, 188);">four</div>
+        <div class="five" style="background-color: rgb(117, 5, 72);">five</div>
+        <div class="six" style="background-color: rgb(186, 184, 20);">six</div>
+        <div class="one" style="background-color: rgb(160, 5, 131);">seven</div>
+        <div class="one" style="background-color: rgb(221, 19, 19);">eight</div>
+        <div class="one" style="background-color: rgb(139, 63, 99);">nine</div>
+        <div class="one" style="background-color: rgb(177, 221, 19);">ten</div>
+        </div>
+  </body>
+</html>

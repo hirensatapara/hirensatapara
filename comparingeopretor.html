@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="equal" style="margin:50px auto;width:300px;"></h1>
+    <h1 id="notequal" style="margin:50px auto;width:300px;"></h1>
+    <h1 id="graterthan" style="margin:50px auto;width:300px;"></h1>
+    <h1 id="lessthan" style="margin:50px auto;width:300px;"></h1>
+    <h1 id="graterthanequalto" style="margin:50px auto;width:300px;"></h1>
+    <h1 id="lessthanequalto" style="margin:50px auto;width:300px;"></h1>
+    <script>
+        //Equal==
+        var A=18;
+        var B=18;
+        C =A==B;
+        document.getElementById("equal").innerHTML = C;
+
+        //notqual
+        var X=18;
+        var Y = 12;
+        Z = X!=Y;
+        document.getElementById("notequal").innerHTML = Z;
+         //grater than>
+
+         var a =18;
+         var b =12;
+         c = a > b;
+         document.getElementById("graterthan").innerHTML = c;
+        
+         //less than<
+         var x = 18;
+         var y = 20;
+         z =x <y;
+         document.getElementById("lessthan").innerHTML = z;
+
+         //grater than equal to>=
+         var d = 18;
+         var e = 12;
+         f = d >= e;
+         document.getElementById("graterthanequalto").innerHTML = f;
+
+         //le
+         var g = 18;
+         var h = 20;
+        i = g <= h;
+        document.getElementById("lessthanequalto").innerHTML = i;
+    </script>
+</body>
+</html>

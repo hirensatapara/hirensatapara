@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arithametickopretar</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="add"></h1>
+    <h1 id="sub"></h1>
+    <h1 id="multi"></h1>
+    <h1 id="divi"></h1>
+    <h1 id="mod"></h1>
+    <h1 id="incre"></h1>
+    <h1 id="decre"></h1>
+    <script type="text/javascript">
+      //addition
+        var x = 5;
+        var y = 6;
+        var x1 = "add";
+        var z = x+y;
+        document.getElementById('add').innerHTML = x1+""+z;
+      //subtraction
+         var a = 6;
+         var b = 2;
+         var a1 = "sub";
+         var c = a-b;
+         document.getElementById('sub').innerHTML = a1+""+c;
+      //multiplication
+         var A = 6;
+         var B = 2;
+         var A1 = "muiti";
+         var C = A*B;
+        document.getElementById('multi').innerHTML = A1+""+C;
+       //Division
+        var X = 6;
+        var Y = 2;
+        var X1 = "divi";
+        var Z = A/B;
+        document.getElementById('divi').innerHTML = X1+""+Z;
+     //modulus
+        var e = 9;
+        var f = 3;
+        var e1 = "mod";
+        var g = e%f;
+        document.getElementById('mod').innerHTML = e1+""+g;
+   //increment
+        var E = 5;
+        var E1 = "incre";
+        E++;
+        document.getElementById('incre').innerHTML = E1+""+E;
+//decrement
+        var F = 5;
+        var F1 = "Decre";
+        F--;
+        document.getElementById('decre').innerHTML = F1+""+F;
+    </script>
+</body>
+</html>

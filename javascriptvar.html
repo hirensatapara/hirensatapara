@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="length1"></p>
+    <hr>
+    <p id="slice1"></p>
+    <hr>
+    <p id="replace1">please visit Microsoft!</p>
+    <hr>
+    <p id="upper1">hellow word</p>
+    <hr>
+    <p id="concat1"></p>
+    <hr>
+    <p id="charat"></p>
+    <hr>
+    <p id="charcodeat"></p>
+    <hr>
+    <p id="sta"></p>
+    <hr>
+    <p id="lanth2"></p>
+    <br>
+    <hr>
+    <p id="somo1">hiren </p><br>
+    <hr>
+    <p id="som1"></p>
+    <button onclick="gama()">click to slice</button>
+    <button onclick="rep()">Click To Replace String</button><br><br>
+    <hr>
+    <button onclick="upper()">Click To Convert string in Upper case</button>
+    <hr><br><br>
+    <button onclick="trim1()">Click To Use Trim</button>
+    <hr>
+    <button onclick="sog1">click me </button>
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("length1").innerHTML = "The Length of text variable is : " + text.length; 
+    </script>
+    <script>
+        let str = "Apple,Banana,Kiwi";
+        document.getElementById("slice1").innerHTML = "String After slice:" + str.slice(7, 13); 
+        function rep() {
+            let text = document.getElementById("replace1").innerHTML;
+            document.getElementById("replace1").innerHTML =
+                text.replace("Microsoft","W3Schoole");
+        }
+    </script>
+    <script>
+        function upper() {
+            let text1 = document.getElementById("upper1").innerHTML;
+            document.getElementById("upper1").innerHTML =
+                text1.toUpperCase();
+        } 
+    </script>
+    <script>
+        let text2 = "speed";
+        let text3 = "computers"
+        let text4 = "text2.concat"("", text3);
+        document.getElementById("concat").innerHTML = text4;
+    </script>
+    <script>
+        function trim1() {
+            let text = "  Hellow word!  ";
+            alert(text.trim());
+        }
+    </script>
+    <script>
+        var ch = "HELLOW WORLD";
+        document.getElementById("charat").innerHTML = ch.charAt(0);
+    </script>
+    <script>
+        let cha = "HELLOW WORLD";
+        document.getElementById("charcodeat").innerHTML = cha.charCode(0);
+    </script>
+    <script>
+        let sta = "a,b,c,d,e,f,g";
+        const myArray = sta.split(",");
+        document.getElementById("sta").innerHTML = sta.myArray[0];
+    </script>
+    <script>
+        function gama(){
+            document.getElementById("somo1").innerHTML = "hiren".slice(0,2);
+        }
+    </script>
+    <script> 
+    </script>
+</body>
+
+</html>
