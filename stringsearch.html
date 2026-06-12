@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="index1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptatum.inventore.lorem80</p><hr>
+    <p id="lastindex1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit sed, ullam assumenda debitis atque incidunt. Cum quos necessitatibus recusandae. Aperiam magnam ab a sed perspiciatis eveniet veritatis eaque ratione veniam.</p><hr>
+    <p id="search">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, blanditiis.</p>
+    <p id="match">Lorem ipsum dolor sit amet.</p>
+    <p id="inc">Lorem ipsum dolor sit.</p>
+    <p id="startwidth">Lorem, ipsum.</p><hr>
+    <p id="endwith">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <button onclick="index()">click me index</button>
+    <button onclick="lastindex1()">click me index</button>
+    <button onclick="search1()">click me search</button>
+    <script>
+            function index1()
+            {
+                let str = "please locate where 'locate' occurs";
+            document.getElementById("index1").innerHTML = "The index value of locate is :" +str.indexOf("locate");
+            }
+        </script>
+        <script>
+         function lastindex1()
+            {
+               let str1 = "please locate where 'locate' occurs";
+            document.getElementById("lastindex1").innerHTML = "The index value of locate is 2:"+str1.lastindexOf("locate");
+            }
+        </script>
+        <script>
+           function search1(){
+             let str2 = "the rain in spain stays mainly in the plain";
+            document.getElementById("search").innerHTML = "The index value of locate is:"+str0.search("locate");
+           }
+        </script>
+        <script>
+            let text = "hellow world,wellcom to the universe.";
+            document.getElementById("match").innerHTML = "string match" +text.Match("/ain/g");
+        </script>
+        <script>
+            let text1 = "the rain in SPAIN STAYS mainly in the plain";
+            document.getElementById("inc").innerHTML = text1.includes("world");
+        </script>
+        <script>
+            let text2 = "HEllow world,wellcome to the universe.";
+            document.getElementById("startwith").innerHTML = text2.startsWith("Hello");
+        </script>
+        <script>
+            let text3 = "john doe.";
+            document.getElementById("endwith").innerHTML = text3.endsWidth("doe.");
+        </script>
+</body>
+</html>

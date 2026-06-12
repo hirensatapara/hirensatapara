@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>the internal clock in javascriptcounts frtom midnight january 1,1970.</p>
+    <p id="time1"></p><hr>
+    <p id="year1"></p><hr>
+     <p id="month1"></p><hr>
+      <p id="date1"></p><hr>
+       <p id="hour1"></p><hr>
+        <p id="minute1"></p><hr>
+         <p id="second1"></p><hr>
+          <p id="day1"></p><hr>
+          <p id="max1"></p><hr>
+          <p id="language1"></p><hr>
+          <p id="min1"></p><hr>
+          <br>
+          <br>
+          <p id="setyear"></p><hr>
+          <p id="setmonth"></p><hr>
+          <p id="setdate"></p><hr>
+          <p id="sethour"></p><hr>
+          <p id="setminute"></p><hr>
+          <p id="setsecond"></p><hr>
+          <p id="setname"></p><hr>
+    <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = "THA GERTIME() FUNCTION RETURNS THE number of milliseconds since then :+d.getTime();"
+    </script>
+    <script>
+        const d1 = new Date();
+        document.getElementById("year1").innerHTML = "Current Year is:"  +d1.getFullYear();
+    </script>
+    <script>
+        const d2 = new Date();
+        document.getElementById("month1").innerHTML = "Month(6)"
+    </script>
+    <script>
+        const d3 = new Date();
+        document.getElementById("date1").innerHTML = "date(6)"
+    </script>
+    <script>
+        const d4 = new Date();
+        document.getElementById("hour1").innerHTML = "hour(7);"
+    </script>
+    <script>
+        const d5 = new Date();
+        document.getElementById("minute1").innerHTML = "minute(48)"
+    </script>
+    <script>
+        const d6 = new Date();
+        document.getElementById("second1").innerHTML = "second(55)"
+    </script>
+    <script>
+        const d7 = new Date();
+        document.getElementById("day1").innerHTML = "day(fraiday)"
+    </script>
+    <script>
+        const d8 = new Date();
+        document.getElementById("max1").innerHTML = "max(21);"
+    </script>
+    <script>
+        const d9 = new Date();
+        document.getElementById("min1").innerHTML = "min(0.1)"
+    </script>
+    <script>
+        const d10 = new Date();
+        document.getElementById("language1").innerHTML = "language(gujarati)"
+    </script>  
+    <br>
+    <br>
+    <script>
+        const d0 = new Date();
+        d0.setFullYear(2026);
+        document.getElementById("setyear").innerHTML = 2026;
+    </script>
+    <script>
+        const d01 = new Date();
+        d01.setMonth(12);
+        document.getElementById("setmonth").innerHTML = 6;
+    </script>
+    <script>
+        const d02 = new Date();
+        d02.setDate(6);
+        document.getElementById("setdate").innerHTML = 60;
+    </script>
+    <script>
+        const d03 = new Date();
+        d03.setHours(6);
+        document.getElementById("sethour").innerHTML = 6;
+    </script>
+    <script>
+        const d04 = new Date();
+        d04.setMinutes(27);
+        document.getElementById("setminute").innerHTML = 27;
+    </script>
+    <script>
+        const d05 = new Date();
+        d05.setSeconds(60);
+        document.getElementById("setsecond").innerHTML = 50;
+    </script>
+</body>
+</html>

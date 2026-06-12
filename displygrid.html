@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .main{
+            display:grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 100px 450px 120px 120px 100px;
+            padding:30px;
+            margin:10px;
+         }
+.main div{
+            border:1px solid black;
+            text-align: center;
+            font-size:35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+    }
+.two{
+            grid-column:2/5;
+      }
+.three{
+            grid-column:1/5;
+     }
+.four{
+            grid-column:1/3;
+            grid-row:3/5;
+     }
+.five{
+            grid-column:3/4;
+            grid-row:3/5;
+      }
+.eight{
+            grid-column:1/5;
+      }
+.colorbody{
+    background-color: rgb(18, 248, 133);
+}   
+.hero{
+    position:fixed;
+    bottom:0px;
+    top:0px;
+    left:0px;
+    right:10px;
+}   
+    </style>
+</head>
+<body class="colorbody">
+    <center><h1 class="hero" style="color:rgb(2, 28, 15)">wellcome</h1></center>
+    <div class="main">
+        <div class="one" style="font-size: 70px;color: blue;background-image:url(https://i.pinimg.com/736x/b0/b4/73/b0b47399d9b61d27a2ddccb57458e654.jpg);">one</div>
+        <div class="two"  style="font-size: 70px;color: brown;background-image:url(https://i.pinimg.com/736x/9e/93/cf/9e93cff1086d3427f334ea6fdc851d45.jpg);">two</div>
+        <div class="three"  style="font-size: 70px;color:blueviolet;background-image:url(https://i.pinimg.com/1200x/92/36/f3/9236f3a52b2e5fc6b27f6f665a87094a.jpg);">three</div>
+        <div class="four"  style="font-size: 70px;color:rgb(11, 234, 123);background-image:url(https://i.pinimg.com/1200x/b9/29/8f/b9298ff913d472d6ae0f32e0718e9e4f.jpg);">four</div>
+        <div class="five"  style="font-size: 70px;color:burlywood;background-image:url(https://i.pinimg.com/736x/a9/78/38/a978380582eb5424a749e3cc80f74206.jpg);">five</div>
+        <div class="six"  style="font-size: 70px;color:rgb(103, 13, 21);background-image:url(https://i.pinimg.com/736x/ae/8d/50/ae8d503be97fdc87103cf027c67e4e5a.jpg);">six</div>
+        <div class="seven"  style="font-size: 70px;color:chocolate;background-image:url(https://i.pinimg.com/1200x/8a/c5/4c/8ac54c715dc7eb6d7d2010d9f77a4f46.jpg);">seven</div>
+        <div class="eight"  style="font-size: 70px;color:deeppink;background-image:url(https://i.pinimg.com/1200x/dd/5a/a8/dd5aa8dbf3ea9eebb50320f7d5a68975.jpg);height:100px">eight</div>
+    </div>
+</body>
+</html>

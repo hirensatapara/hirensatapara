@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="trim1"></p>
+    <p id="charAt1"></p>
+    <p id="charcodeAt1"></p>
+    <p id="sta1"></p>
+    <p id="upper1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur officia inventore facere vitae suscipit obcaecati fugiat magni eius nam eos illum sint voluptas delectus, et nulla. Harum cum accusantium a corporis, quod temporibus repellat qui sed molestiae quae rem laborum ipsum quo illum perspiciatis delectus, aut fugit? Sed odit et esse qui obcaecati provident? Ipsum vel quisquam id omnis minus esse laborum voluptatibus dicta libero numquam est harum saepe cupiditate quos asperiores explicabo aliquid, distinctio quia eligendi nam! Magni vero praesentium necessitatibus, expedita sunt inventore quasi! Nesciunt est eaque, quo illo aspernatur, iusto illum aliquid amet explicabo, velit magnam?</p><br><br>
+    <p id="lower1">HELLOW WORLD HTML IS A HATPER TEXT MARCRUP LANGVEGE</p>
+    <p id="replace1">satapara hiren a</p>
+    <p id="length1"></p>
+    <p id="slice1"></p>
+    <p id="concat1"></p>
+    <button onclick="show()">click me!</button><br><br><br><br>
+    <button onclick="trim1()">click to trim</button><br><br><br><br>
+    <button onclick="charAt1()">click me charAt</button><br><br><br><br>
+    <button onclick="charcodeAt1()">click to charcodeAt1</button><br><br><br><br>
+    <button onclick="sta1()">click me sta</button><br><br><br><br>
+    <button onclick="upper1()">click me upper case</button><br><br><br><br>
+    <button onclick="lower1()">click me and lower case</button><br><br><br>
+    <button onclick="replace1()">click to change </button><br><br><br>
+    <button onclick="length1()">click and check length</button><br><br><br>
+    <button onclick="slice1()">click and slice text</button><br><br><br>
+    <button onclick="concat1()">click to concat</button>
+    <script>
+        function show(){
+            document.getElementById("demo").innerHTML = "Hellow".concat("mitu");
+        }
+    </script>
+    <script>
+        function trim1(){
+            let textt="hellow world"
+            alert(textt.trim());
+        }
+    </script>
+    <script>
+       function charAt1(){
+        var ch = "HELLOW WORLD";
+        document.getElementById("charAt1").innerHTML = ch.charAt(5);
+       }
+    </script>
+    <script>
+        function charcodeAt1()
+        {
+            let cha = "HELLOE ME!";
+            document.getElementById("charcodeAt1").innerHTML = cha.charCodeAt(3);
+        }
+    </script>
+    <script>
+        function sta1(){
+            let sa = "a,b,c,d,e,f,g";
+            const myArry = sa.split(",");
+            document.getElementById("sta1").innerHTML = myArry[5];
+        }
+    </script>
+    <script>
+        function upper1()
+        {
+            let text1 = document.getElementById("upper1").innerHTML;
+            document.getElementById("upper1").innerHTML = text1.toUpperCase();
+        }
+    </script>
+    <script>
+        function lower1(){
+          let  text2 = document.getElementById("lower1").innerHTML;
+        document.getElementById("lower1").innerHTML = text2.toLowerCase();
+        }
+        </script>
+        <script>
+            function replace1(){
+                let text = document.getElementById("replace1").innerHTML;
+                document.getElementById("replace1").innerHTML = text.replace("satapara","parjapati");
+            }
+        </script>
+        <script>
+            function length1()
+            {
+                 let text = document.getElementById("length1").innerHTML;
+                document.getElementById("length1").innerHTML = "The lengthg of text variable is :" +text.length;
+            }
+        </script>
+        <script>
+            let str = "Apple,Banana,Kiwi";
+            document.getElementById("slice1").innerHTML = "string After slice :"+str.slice(1);
+        </script>
+        <script>
+            let text2 ="speed";
+            let text3 ="computers";
+            let text4 =text2.concat(" ",text4);
+            document.getElementById("concat1").innerHTML = text4;   
+        </script>
+</body>
+</html>

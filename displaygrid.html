@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border:1px solid black;
+            display:grid;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 200px 500px 200px;
+        }
+        .main div{
+            border:1px solid black;
+            text-align:center;
+            font-size:35px;
+        }
+        .one{
+            grid-column: 1/4;
+        }
+        .five{
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+<body>
+     <div class="main">
+            <div class="one">one</div>
+             <div class="two">two</div>
+              <div class="three">three</div>
+               <div class="four">four</div>
+                <div class="five">five</div>
+        </div>
+</body>
+</html>
