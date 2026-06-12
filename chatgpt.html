@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Banner</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ececec;
+        }
+
+        .box {
+            height: 500px;
+            margin: 25px;
+            padding: 60px;
+
+            background-image: url("https://i.pinimg.com/originals/81/1b/84/811b8482a2b84c9254171ef82c70e20b.jpg");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left h1 {
+            font-size: 70px;
+            color: white;
+        }
+
+        .left h2 {
+            font-size: 35px;
+            margin-top: 15px;
+            color: white;
+        }
+
+        .right {
+            text-align: center;
+        }
+
+        .coupon {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .percent {
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="left">
+            <h1>Get 25% Off</h1>
+            <h2>UP TO 100% OFF*</h2>
+        </div>
+
+        <div class="right">
+
+            <div class="coupon">
+                COUPON CODE <br>
+                MYNTRASAVE
+            </div>
+
+            <div class="percent">
+                <img src="per.png" height="150px">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        * On your first order / T&C apply
+    </div>
+
+</body>
+
+</html>
